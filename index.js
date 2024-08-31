@@ -1,4 +1,4 @@
-// script.js
+
 document.addEventListener('DOMContentLoaded', () => {
     const words = [
         { word: "javascript", scrambled: "sjcivatripa" },
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const feedbackMessage = document.getElementById('feedback-message');
     const attemptsCount = document.getElementById('attempts-count');
 
-    // Function to pick a new scrambled word
+
     function pickNewWord() {
         const randomIndex = Math.floor(Math.random() * words.length);
         currentWord = words[randomIndex];
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         attemptsCount.textContent = attempts;
     }
 
-    // Function to handle user submission
+
     function checkGuess() {
         const userGuess = userInput.value.trim().toLowerCase();
         attempts++;
@@ -44,10 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Event listeners for buttons
+
     submitBtn.addEventListener('click', checkGuess);
     newWordBtn.addEventListener('click', pickNewWord);
 
-    // Initialize game with a new word
     pickNewWord();
 });
